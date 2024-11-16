@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ⓐ𝐙кᗩ 𝐆ⓛ๏ⓑ𝒶𝓁</title>
+    <!-- Link ke Google Fonts untuk menggunakan font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Link ke Bootstrap CSS melalui CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://cdn.pixabay.com/photo/2021/12/13/09/46/moto-bikes-6867911_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .btn-primary {
+            background-color: black;
+            border-color: black;
+        }
+
+        .btn-primary:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+
+        .nav-link {
+            text-transform: uppercase;
+        }
+
+        .category-section {
+            margin-top: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .category-title {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body h5, .card-body p {
+            color: black;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .center-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .product-card {
+            display: block;
+        }
+
+        .product-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://w7.pngwing.com/pngs/511/637/png-transparent-azka-global-network-logos-brand-home-improvement-shop-text-service-photography.png" alt="Logo" style="width: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#motorcycle">Motorcycle</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fashion">Fashion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#shoes">Shoes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cars">Cars</a>
+                </li>
+            </ul>
+                <!-- Input pencarian produk -->
+                <form class="d-flex" role="search" onsubmit="event.preventDefault(); searchProducts();">
+                    <input class="form-control me-2" type="search" placeholder="Search products" aria-label="Search" id="searchInput">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <!-- Button Signup di bagian kanan -->
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Konten Utama dengan Judul Tengah -->
+    <div class="container mt-5 center-title">
+        <h1 style="color: black;">Ⓐ𝐙кᗩ 𝐆ⓛ๏ⓑ𝒶𝓁</h1>
+        <p>Jelajahi berbagai kategori produk terbaik di sini!</p>
+    </div>
+
+   <!-- Motorcycle Section -->
+<div id="motorcycle" class="category-section">
+    <h2 class="category-title">Motorcycle</h2>
+    <div class="row">
+        <div class="col-md-3 product-card" id="product1">
+            <div class="card">
+                <img src="/gg/gacor/azka.jpg" class="card-img-top" alt="Produk 1">
+                <div class="card-body">
+                    <h5 class="card-title">KAWASAKI NINJA H2R</h5>
+                    <p class="card-text">Kawasaki Ninja H2R adalah motor sport supercharged.</p>
+                    <a href="https://www.olx.co.id/item/brand-new-kawasaki-h2-supercharged-1000cc-nik-2022-tt-r1cbrz1000v4-iid-918708987" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://www.kawasaki-motor.co.id/id-id/sepeda-motor/ninja/hypersport/ninja-h2/2022-ninja-h2#specs" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-3 product-card" id="product2">
+                <div class="card">
+                    <img src="/gg/gacor/bmw-s-1000-rr-89167.webp" class="card-img-top" alt="Produk 2">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW s1000rr</h5>
+                        <p class="card-text">BMW s1000rr adalah motor sport unggulan dari bmw yang tidak diragukan lagi.</p>
+                        <a href="https://www.olx.co.id/item/yamaha-yzf-r1-50th-anniv-fptt-zx25r-r6-cbr1000-mv-avsuta-z800-z900-iid-927797771" class="btn btn-dark" target="_blank">Beli</a>
+                        <a href="https://www.bmw-motorrad.co.id/en/models/sport/s1000rr/technicaldata.html#/section-technical-data" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 product-card" id="product3">
+                <div class="card">
+                    <img src="/gg/gacor/merah.jpg" class="card-img-top" alt="Produk 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ducati Panigale V4</h5>
+                        <p class="card-text">Ducati Panigale V4 adalah motor sport ikonik dengan performa tinggi dan desain yang memukau.</p>
+                        <a href="https://www.olx.co.id/item/ducati-panigale-v4-sp2-30-anniversario-916-iid-926731310" class="btn btn-dark" target="_blank">Beli</a>
+                        <a href="https://www.zigwheels.co.id/motor-baru/ducati/panigale-v4/spesifikasi/" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 product-card" id="product4">
+                <div class="card">
+                    <img src="/gg/gacor/suzuki-hayabusa-color-694906.avif" class="card-img-top" alt="Produk 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki Hayabusa</h5>
+                        <p class="card-text">Suzuki Hayabusa dikenal dengan kecepatan luar biasa dan mesin 1340cc yang sangat bertenaga.</p>
+                        <a href="https://www.tokopedia.com/search?st=product&q=suzuki+hayabusa" class="btn btn-dark" target="_blank">Beli</a>
+                        <a href="https://www.bmw-motorrad.co.id/en/models/sport/s1000rr/technicaldata.html#/section-technical-data" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function searchProducts() {
+            var input = document.getElementById('searchInput').value.toUpperCase();
+            var products = document.getElementsByClassName('product-card');
+
+            for (var i = 0; i < products.length; i++) {
+                var product = products[i];
+                var title = product.getElementsByClassName('card-title')[0].innerText;
+
+                if (title.toUpperCase().indexOf(input) > -1) {
+                    product.style.display = '';  // Show the product
+                } else {
+                    product.style.display = 'none';  // Hide the product
+                }
+            }
+        }
+    </script>
+
+
+    <!-- Tambahkan script Bootstrap untuk modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+    <!-- Fashion Section -->
+<div id="fashion" class="category-section">
+    <h2 class="category-title">Fashion</h2>
+    <div class="row">
+        <!-- Fashion Item 1 -->
+        <div class="col-md-3 product-card" id="fashion1">
+            <div class="card">
+                <img src="/gg/gacor/t-shirt.jpg" class="card-img-top" alt="Fashion Item 1">
+                <div class="card-body">
+                    <h5 class="card-title">T-shirt Oversized Graphic</h5>
+                    <p class="card-text">T-shirt oversized dengan desain grafis yang keren, cocok untuk gaya santai atau street style.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=T-shirt+Oversized+Graphic" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fashion Item 2 -->
+        <div class="col-md-3 product-card" id="fashion2">
+            <div class="card">
+                <img src="/gg/gacor/jacket.jpg" class="card-img-top" alt="Fashion Item 2">
+                <div class="card-body">
+                    <h5 class="card-title">Jaket Bomber Kulit</h5>
+                    <p class="card-text">Jaket bomber kulit dengan aksen ritsleting dan detail yang elegan Memberikan kesan stylish.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=jaket+bomber+kulit" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fashion Item 3 -->
+        <div class="col-md-3 product-card" id="fashion3">
+            <div class="card">
+                <img src="/gg/gacor/celana.webp" class="card-img-top" alt="Fashion Item 3">
+                <div class="card-body">
+                    <h5 class="card-title">Celana Panjang Cargo</h5>
+                    <p class="card-text">Celana cargo dengan banyak kantong praktis, Ideal untuk aktivitas outdoor dan gaya streetwear.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=celana+panjang+kargo" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fashion Item 4 -->
+        <div class="col-md-3 product-card" id="fashion4">
+            <div class="card">
+                <img src="/gg/gacor/busuk.webp" class="card-img-top" alt="Fashion Item 4">
+                <div class="card-body">
+                    <h5 class="card-title">celana jeans casual</h5>
+                    <p class="card-text">celana jeans casual dengan desain modern, Pilihan tepat untuk gaya kasual.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=Sneakers+high+top" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <!-- Shoes Section (Ganti Favorite menjadi Shoes) -->
+<div id="shoes" class="category-section">
+    <h2 class="category-title">Shoes</h2>
+    <div class="row">
+        <div class="col-md-3 product-card" id="shoes1">
+            <div class="card">
+                <img src="/gg/gacor/nike air max 97.jpg" class="card-img-top" alt="Shoes 1">
+                <div class="card-body">
+                    <h5 class="card-title">Nike Air Max</h5>
+                    <p class="card-text">Nike Air Max memberikan kenyamanan dan desain ikonik dan mewah</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=nike+air+max" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 product-card" id="shoes2">
+            <div class="card">
+                <img src="/gg/gacor/adidas maha.jpg" class="card-img-top" alt="Shoes 2">
+                <div class="card-body">
+                    <h5 class="card-title">Adidas Ultraboost</h5>
+                    <p class="card-text">Adidas Ultraboost dengan teknologi terbaik untuk kenyamanan maksimal.</p>
+                    <a href="https://www.tokopedia.com/sneakersdept/sepatu-lari-pria-adidas-ultraboost-22-gx5459-original-40-5-2b965?extParam=ivf%3Dfalse%26keyword%3Dadidas+ultraboost%26search_id%3D202411151402180093630424D1A4057ZFD%26src%3Dsearch" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 product-card" id="shoes3">
+            <div class="card">
+                <img src="/gg/gacor/adidas_sepatu_adidas_nmd_r1_gz9261_full01_orwyj2mi.webp" class="card-img-top" alt="Shoes 3">
+                <div class="card-body">
+                    <h5 class="card-title">Adidas NMD</h5>
+                    <p class="card-text">Adidas NMD, sepatu dengan desain modern dan teknologi inovatif maksimal.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=adidas+nmd" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 product-card" id="shoes4">
+            <div class="card">
+                <img src="/gg/gacor/Sepatu-Sneaker-Suede-XL.avif" class="card-img-top" alt="Shoes 4">
+                <div class="card-body">
+                    <h5 class="card-title">Puma Suede</h5>
+                    <p class="card-text">Puma Suede, sepatu klasik dengan desain retro yang tetap stylish dan nyaman.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=puma+suede" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <!-- Shoes 5 -->
+        <div class="col-md-3 product-card" id="shoes5">
+            <div class="card">
+                <img src="/gg/gacor/AIR+FORCE+1+'07.png" class="card-img-top" alt="Shoes 5">
+                <div class="card-body">
+                    <h5 class="card-title">Nike Air Force 1</h5>
+                    <p class="card-text">Nike Air Force 1, sepatu klasik yang tetap populer dengan desain simple dan nyaman.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=nike+air+force+1" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <!-- Shoes 6 -->
+        <div class="col-md-3 product-card" id="shoes6">
+            <div class="card">
+                <img src="/gg/gacor/hai.jpg" class="card-img-top" alt="Shoes 6">
+                <div class="card-body">
+                    <h5 class="card-title">Reebok Classic Leather</h5>
+                    <p class="card-text">Reebok Classic Leather, sepatu dengan desain retro dan kenyamanan maksimal.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=reebok+classic+leather" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <!-- Shoes 7 -->
+        <div class="col-md-3 product-card" id="shoes7">
+            <div class="card">
+                <img src="/gg/gacor/under.jpg" class="card-img-top" alt="Shoes 7">
+                <div class="card-body">
+                    <h5 class="card-title">Under Armour HOVR Phantom</h5>
+                    <p class="card-text">Under Armour HOVR Phantom, sepatu olahraga dengan teknologi pelindung yang nyaman.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=under+armour+hovr+phantom" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+        <!-- Shoes 8 -->
+        <div class="col-md-3 product-card" id="shoes8">
+            <div class="card">
+                <img src="/gg/gacor/new.jpg" class="card-img-top" alt="Shoes 8">
+                <div class="card-body">
+                    <h5 class="card-title">New Balance 990v5</h5>
+                    <p class="card-text">New Balance 990v5, sepatu lari dengan kualitas dan kenyamanan yang luar biasa.</p>
+                    <a href="https://www.tokopedia.com/search?st=product&q=new+balance+990v5" class="btn btn-dark" target="_blank">Beli</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Cars Section (Lifestyle telah diganti dengan Cars) -->
+<div id="cars" class="category-section">
+    <h2 class="category-title">Cars</h2>
+    <div class="row">
+        <div class="col-md-3 product-card" id="car1">
+            <div class="card">
+                <img src="/gg/gacor/download.jpg" class="card-img-top" alt="Car 1">
+                <div class="card-body">
+                    <h5 class="card-title">Ferrari 488 GTB</h5>
+                    <p class="card-text">Ferrari 488 GTB adalah mobil sport mewah dengan performa tinggi.</p>
+                    <a href="https://www.olx.co.id/item/ferrari-488-gtb-2019-rosso-corsa-iid-927920326" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://www.ferrari.com/en-EN/auto/ferrari-488-gtb" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 product-card" id="car2">
+            <div class="card">
+                <img src="/gg/gacor/Aventador-SVJ5-500x333.avif" class="card-img-top" alt="Car 2">
+                <div class="card-body">
+                    <h5 class="card-title">Lamborghini Aventador</h5>
+                    <p class="card-text">Lamborghini Aventador, mobil sport dengan desain ikonik dan performa luar biasa.</p>
+                    <a href="https://www.olx.co.id/item/lamborghini-aventador-50-anniversario-lp720-4-yellow-on-black-2014-iid-927730681" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://www.lamborghini.com/en-en/models/aventador" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- Car 3 -->
+        <div class="col-md-3 product-card" id="car3">
+            <div class="card">
+                <img src="/gg/gacor/2024_mercedes-benz_s-class_sedan_amg-s-63-e-performance_fq_oem_1_1280.avif" class="card-img-top" alt="Car 3">
+                <div class="card-body">
+                    <h5 class="card-title">Mercedes-Benz S-Class</h5>
+                    <p class="card-text">Mercedes-Benz S-Class adalah simbol kemewahan dengan teknologi dan performa tinggi.</p>
+                    <a href="https://www.olx.co.id/item/mercedes-benz-cla45-s-2022-2023-km-2rb-antik-mercy-cla45-cla-45-iid-928161376" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://www.mercedes-benz.co.id/s-class/" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- Car 4 -->
+        <div class="col-md-3 product-card" id="car4">
+            <div class="card">
+                <img src="/gg/gacor/mobil.jpg" class="card-img-top" alt="Car 4">
+                <div class="card-body">
+                    <h5 class="card-title">McLaren Artura Elite</h5>
+                    <p class="card-text">McLaren Artura Elite, mobil sport ikonik dengan desain modern dan performa luar biasa.</p>
+                    <a href="https://www.olx.co.id/item/mclaren-artura-2023-elite-flux-green-iid-927921071" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://www.mercedes-benz.co.id/s-class/" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- Car 5 -->
+        <div class="col-md-3 product-card" id="car5">
+            <div class="card">
+                <img src="/gg/gacor/bmw-m4-cls-limited-edition-resmi-dirilis-cuma-ada-dua-di-indonesia98.webp" class="card-img-top" alt="Car 5">
+                <div class="card-body">
+                    <h5 class="card-title">BMW M4</h5>
+                    <p class="card-text">BMW M4, mobil sport dengan performa luar biasa dan desain tajam.</p>
+                    <a href="https://www.olx.co.id/item/audi-r8-v8-coupe-2010-white-iid-927973001" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://www.audi.co.id/sea/web/id/models/r8/r8-coupe.html" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- Car 6 -->
+        <div class="col-md-3 product-card" id="car6">
+            <div class="card">
+                <img src="/gg/gacor/jamet.jpg" class="card-img-top" alt="Car 6">
+                <div class="card-body">
+                    <h5 class="card-title">Audi R8 V10</h5>
+                    <p class="card-text">Audi R8 V10, mobil sport mewah dengan mesin 10-silinder yang memukau.</p>
+                    <a href="https://www.olx.co.id/item/audi-r8-v10-2024-exotic-sport-car-iid-928481624" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://www.audi.com/en/models/r8/r8-v10.html" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- Car 7 -->
+        <div class="col-md-3 product-card" id="car7">
+            <div class="card">
+                <img src="/gg/gacor/2020-aston-martin-db11.jpg" class="card-img-top" alt="Car 7">
+                <div class="card-body">
+                    <h5 class="card-title">Aston Martin DB11</h5>
+                    <p class="card-text">Aston Martin DB11, mobil mewah dengan performa dan kenyamanan yang luar biasa.</p>
+                    <a href="https://www.olx.co.id/item/aston-martin-db11-v8-2022-iid-927905813" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://astonmartinworks.com/models/db11/" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- Car 8 -->
+        <div class="col-md-3 product-card" id="car8">
+            <div class="card">
+                <img src="/gg/gacor/911.webp" class="card-img-top" alt="Car 8">
+                <div class="card-body">
+                    <h5 class="card-title">Porsche 911 GT3</h5>
+                    <p class="card-text">Porsche 911 GT3, kendaraan legendaris dengan performa balap yang mengagumkan.</p>
+                    <a href="https://www.olx.co.id/item/porsche-911-gt3-2022-iid-927906022" class="btn btn-dark" target="_blank">Beli</a>
+                    <a href="https://www.porsche.com/international/models/911/911-gt3-models/911-gt3/" class="btn btn-secondary" target="_blank">Spesifikasi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+       <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>Hubungi Kami:</p>
+            <div class="d-flex justify-content-center">
+                <!-- WhatsApp Link -->
+                <a href="https://wa.me/6282176804064" class="btn btn-success mx-2" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <!-- Facebook Link -->
+                <a href="https://www.facebook.com/iwan.irwanto.524?mibextid=ZbWKwL" class="btn btn-primary mx-2" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <!-- Instagram Link -->
+                <a href="https://www.instagram.com/iwan.irwanto.524/" class="btn btn-danger mx-2" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+            <p class="mt-3">&copy; 2024 Ⓐ𝐙кᗩ 𝐆ⓛ๏ⓑ𝒶𝓁. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome Icons (untuk WhatsApp, Facebook, dan Instagram) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <!-- Modal Sign Up -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form Sign Up -->
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Konfirmasi Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Daftar</button>
+                </form>
+
+                <!-- Area untuk menampilkan informasi pengguna -->
+                <div id="signupMessage" class="mt-3" style="display: none;">
+                    <h5>Informasi yang Anda Masukkan:</h5>
+                    <p><strong>Nama:</strong> <span id="displayName"></span></p>
+                    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                    <p><strong>Password:</strong> <span id="displayPassword"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tambahkan Script untuk Mengirim Form dan Menampilkan Data -->
+<script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Mencegah form untuk reload halaman
+
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Validasi Password
+        if (password !== confirmPassword) {
+            alert("Password dan Konfirmasi Password tidak sama!");
+            return;
+        }
+
+        // Menyimpan data pengguna di LocalStorage (untuk demonstrasi saja)
+        localStorage.setItem('userName', name);
+        localStorage.setItem('userEmail', email);
+
+        // Menampilkan informasi yang dimasukkan
+        document.getElementById('signupMessage').style.display = 'block';
+        document.getElementById('displayName').innerText = name;
+        document.getElementById('displayEmail').innerText = email;
+        document.getElementById('displayPassword').innerText = password;
+
+        // Menutup modal setelah form dikirim
+        var modal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+        modal.hide();
+
+        // Clear form
+        document.getElementById('signupForm').reset();
+    });
+</script>
